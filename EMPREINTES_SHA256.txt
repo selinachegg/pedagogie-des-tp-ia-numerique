@@ -1,8 +1,8 @@
-Empreintes SHA-256 des fichiers déposés — © 2026 Sélina Cheggour, tous droits réservés
-Calculées le 2026-10-15 11:14    . Présenté au conseil de perfectionnement de l'Icam Toulouse, 14-15 octobre 2026.
+Empreintes SHA-256 des fichiers déposés — © 2026 Selina Cheggour, tous droits réservés
+Calculées le 2026-10-15 11:16. Présenté au conseil de perfectionnement de l'Icam Toulouse, 14-15 octobre 2026.
 
-6a06eecb7e4996274bcca85281bd756aea3c508a8c832df45680f262c0b347c8 *1_Documents/Dossier_LC-4.pdf
-edda13f8df37bc8586451f1398ba7c635e00df00b19c84e3b2decef7148594b9 *1_Documents/Mini_Projet.pdf
-4516762d7a6fa08b93d7237ae2d6c9772091d374a09b05842f7a9e2cefebb665 *1_Documents/TP5-IA.html
-fc2891236b62b967fbbb4e3b215a13ff2ab88829309a7a1c34dc90e0df65d631 *2_Methodologie/Methodologie_Etalonner_l_instrument.pdf
-23be817c620c9a70b98572cacaa522b36509d361319d0f047b08594173b6d1e9 *2_Methodologie/Methodologie_Etalonner_l_instrument.tex
+b414fab6053a8b92026b949f6bc8d10e282c54882b96dde94bd78acf266be827 *1_Documents/Dossier_LC-4.pdf
+db0a2abc36cefa2bdb7c3b6ce08f359e9301ce78193369df131e9e269e1f866e *1_Documents/Mini_Projet.pdf
+5989e38537fde9f3baa7d2858a803c158d1f5e92d1742c1988f2f87e25b45036 *1_Documents/TP5-IA.html
+4e394bb71163095230de7bb8ad1f44ef9715409694f57953b7b510beaf4b64ff *2_Methodologie/Pedagogie_des_TP_IA_numerique.pdf
+fdf09b612630f87edc4d68787c3bcf55ce807128de7ec34d367b1062752c133a *2_Methodologie/Pedagogie_des_TP_IA_numerique.tex

@@ -1,13 +1,13 @@
 # Droits d'auteur — Tous droits réservés
 
-© 2026 Sélina Cheggour. Tous droits réservés.
+© 2026 Selina Cheggour. Tous droits réservés.
 
 Méthode et supports présentés au conseil de perfectionnement de l'Icam Toulouse, les 14 et
 15 octobre 2026.
 
-L'ensemble des contenus de ce dépôt (la méthode « Étalonner l'instrument », sa description
+L'ensemble des contenus de ce dépôt (la méthode « Pédagogie des TP IA numérique », sa description
 écrite, sa structure, ses textes, tableaux, cas fictifs MécaIcam et LC-4, données, prompts,
-pièges pédagogiques, pages web et documents PDF) sont des œuvres de l'esprit dont Sélina
+pièges pédagogiques, pages web et documents PDF) sont des œuvres de l'esprit dont Selina
 Cheggour est l'auteure. Ils sont protégés par le Code de la propriété intellectuelle,
 notamment ses articles L.111-1 et L.122-4.
 
@@ -22,10 +22,9 @@ Sont seules autorisées, conformément à l'article L.122-5, les courtes citatio
 le caractère critique, pédagogique ou d'information de l'œuvre qui les incorpore, sous réserve
 que soient indiqués clairement le nom de l'auteure et la source, sous la forme :
 
-> Cheggour, S. (2026). *Étalonner l'instrument : enseigner l'IA générative aux élèves
-> ingénieurs, de l'atelier guidé au mini-projet*. Présentée au conseil de perfectionnement de
+> Cheggour, S. (2026). *Pédagogie des TP IA numérique : étalonner l'instrument, de l'atelier guidé au mini-projet*. Présentée au conseil de perfectionnement de
 > l'Icam Toulouse, 14-15 octobre 2026.
 
 Les noms et logos Icam restent la propriété de leurs titulaires.
 
-Demandes d'autorisation : Sélina Cheggour, Icam Strasbourg-Europe.
+Demandes d'autorisation : Selina Cheggour, Icam Strasbourg-Europe.
