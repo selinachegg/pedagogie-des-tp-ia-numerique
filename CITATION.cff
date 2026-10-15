@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "Pour citer ce travail, merci d'utiliser la référence ci-dessous. Tous droits réservés : aucune réutilisation sans autorisation écrite de l'auteure."
+title: "Étalonner l'instrument : enseigner l'IA générative aux élèves ingénieurs, de l'atelier guidé au mini-projet"
+type: dataset
+version: "1.0"
+date-released: "2026-10-15"
+authors:
+  - family-names: "Cheggour"
+    given-names: "Sélina"
+    affiliation: "Icam Strasbourg-Europe"
+keywords:
+  - pédagogie
+  - intelligence artificielle générative
+  - prompt engineering
+  - injection indirecte
+  - atelier guidé
+  - mini-projet
+  - formation d'ingénieurs
+abstract: "Méthode pédagogique qui transforme une séance de TP sur l'IA en un atelier guidé d'étalonnage de cinq outils d'IA, suivi d'un mémo de révélation et d'un mini-projet décisionnel, avec des pièges d'injection indirecte cachés dans les supports et une évaluation fondée sur la traçabilité. Présentée au conseil de perfectionnement de l'Icam Toulouse, 14-15 octobre 2026."
+preferred-citation:
+  type: generic
+  title: "Étalonner l'instrument : enseigner l'IA générative aux élèves ingénieurs, de l'atelier guidé au mini-projet"
+  authors:
+    - family-names: "Cheggour"
+      given-names: "Sélina"
+      affiliation: "Icam Strasbourg-Europe"
+  year: 2026
+  month: 10
+  version: "1.0"
+  notes: "Méthode pédagogique présentée au conseil de perfectionnement de l'Icam Toulouse, 14-15 octobre 2026. Tous droits réservés."

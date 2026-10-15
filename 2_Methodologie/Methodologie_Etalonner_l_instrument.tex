@@ -1,0 +1,313 @@
+% ===============================================================
+% METHODE « ETALONNER L'INSTRUMENT »
+% Enseigner l'IA generative aux eleves ingenieurs :
+% de l'atelier guide au mini-projet
+%
+% (c) 2026 Selina Cheggour. Tous droits reserves.
+% Presentee au conseil de perfectionnement de l'Icam Toulouse,
+% 14 et 15 octobre 2026.
+%
+% Compilation (deux passes) : pdflatex Methodologie_Etalonner_l_instrument.tex
+% ===============================================================
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[default]{opensans}
+\usepackage{montserrat}
+\usepackage[a4paper,margin=2.3cm,top=2.6cm,bottom=3cm,footskip=1.4cm]{geometry}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[most]{tcolorbox}
+\usepackage{lastpage}
+
+\definecolor{icamorange}{RGB}{243,146,0}
+\definecolor{icamred}{RGB}{184,32,24}
+\definecolor{icamdark}{RGB}{64,64,64}
+\definecolor{icamgray}{RGB}{96,96,96}
+\definecolor{fondgris}{RGB}{243,243,241}
+\definecolor{fondorange}{RGB}{254,245,232}
+\definecolor{encre}{RGB}{43,43,43}
+
+\newcommand{\auteure}{Sélina Cheggour}
+\newcommand{\droits}{© 2026 \auteure{} · Tous droits réservés · Reproduction, adaptation ou réutilisation interdites sans autorisation écrite de l'auteure}
+\newcommand{\presente}{Méthode présentée au conseil de perfectionnement de l'Icam Toulouse, 14 et 15 octobre 2026}
+
+\usepackage[pdfusetitle,hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Méthode « Étalonner l'instrument » : enseigner l'IA générative, de l'atelier guidé au mini-projet},
+  pdfauthor={Sélina Cheggour},
+  pdfsubject={Méthode pédagogique. Présentée au conseil de perfectionnement de l'Icam Toulouse, 14-15 octobre 2026. © 2026 Sélina Cheggour, tous droits réservés.},
+  pdfkeywords={pédagogie, intelligence artificielle, prompt engineering, injection indirecte, atelier guidé, mini-projet, Icam, tous droits réservés}
+}
+
+\color{encre}
+\titleformat{\section}{\fontfamily{Montserrat-TLF}\selectfont\Large\bfseries\color{encre}}{\color{icamorange}\thesection}{0.6em}{}[\vspace{-0.6em}{\color{icamorange}\rule{18mm}{1.2pt}}]
+\titleformat{\subsection}{\fontfamily{Montserrat-TLF}\selectfont\large\bfseries\color{icamdark}}{\thesubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{1.6em}{0.9em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[L]{\scriptsize\color{icamgray}Méthode « Étalonner l'instrument »}
+\fancyhead[R]{\scriptsize\color{icamgray}\auteure}
+\fancyfoot[C]{\scriptsize\color{icamgray}\droits\\\presente\quad·\quad page \thepage/\pageref{LastPage}}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\scriptsize\color{icamgray}\droits\\\presente\quad·\quad page \thepage/\pageref{LastPage}}}
+
+\newtcolorbox{cadre}[1][]{enhanced,colback=fondorange,colframe=fondorange,boxrule=0pt,arc=0pt,
+  left=4mm,right=4mm,top=2.5mm,bottom=2.5mm,borderline west={2pt}{0pt}{icamorange},#1}
+\newtcolorbox{cadregris}[1][]{enhanced,colback=fondgris,colframe=fondgris,boxrule=0pt,arc=0pt,
+  left=4mm,right=4mm,top=2.5mm,bottom=2.5mm,#1}
+
+\setlist{itemsep=2pt,topsep=4pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+
+\begin{document}
+
+% ---------------------------------------------------------------
+% Page de garde
+% ---------------------------------------------------------------
+\thispagestyle{plain}
+\begin{tcolorbox}[enhanced,colback=white,colframe=white,boxrule=0pt,arc=0pt,left=0pt,right=0pt,
+  borderline west={4pt}{0pt}{icamorange}]
+\hspace{6mm}\begin{minipage}{0.92\linewidth}
+{\scriptsize\bfseries\color{icamred}MÉTHODE PÉDAGOGIQUE · VERSION 1.0 DU 15 OCTOBRE 2026}\par\vspace{4mm}
+{\fontfamily{Montserrat-TLF}\selectfont\fontsize{26}{31}\selectfont\bfseries Étalonner l'instrument\par}
+\vspace{3mm}
+{\large\color{icamgray}Enseigner l'IA générative aux élèves ingénieurs :\\ de l'atelier guidé au mini-projet\par}
+\vspace{6mm}
+{\color{icamorange}\rule{22mm}{1.5pt}}\par\vspace{3mm}
+\textbf{\auteure}\\
+Enseignante, Icam Strasbourg-Europe\\
+Module « Outils numériques pour l'ingénieur » (S1)
+\end{minipage}
+\end{tcolorbox}
+
+\vspace{6mm}
+\begin{cadre}
+\textbf{\presente.}\\[1mm]
+Ce document décrit la méthode d'enseignement conçue par l'auteure, telle qu'elle l'a présentée
+à cette occasion. Il en fixe la forme écrite et en date la paternité.
+\end{cadre}
+
+\vspace{2mm}
+\begin{cadregris}
+\small\textbf{Droits.} © 2026 \auteure. Tous droits réservés. Le présent document, sa
+structure, ses textes, ses tableaux, ses cas et ses supports associés sont des œuvres de l'esprit
+protégées par le Code de la propriété intellectuelle (art.~L.111-1 et L.122-4). Toute
+représentation, reproduction, traduction, adaptation ou réutilisation, intégrale ou partielle,
+par quelque procédé que ce soit, sans l'autorisation écrite et préalable de l'auteure, est
+interdite et constitue une contrefaçon (art.~L.335-2 et suivants). Les courtes citations sont
+permises à condition de mentionner la référence ci-dessous.
+
+\medskip
+\textbf{Pour citer ce document.} Cheggour, S. (2026). \emph{Étalonner l'instrument : enseigner
+l'IA générative aux élèves ingénieurs, de l'atelier guidé au mini-projet}. Méthode pédagogique,
+version 1.0. Présentée au conseil de perfectionnement de l'Icam Toulouse, 14-15 octobre 2026.
+[DOI à venir]
+\end{cadregris}
+
+\newpage
+% ---------------------------------------------------------------
+\section{Le problème posé}
+
+Les élèves ingénieurs de première année utilisent déjà les assistants d'IA générative. Leur
+apprendre à « s'en servir » n'ajoute presque rien. Ce qui leur manque, c'est un comportement
+professionnel face à un outil qui répond toujours, avec aplomb, y compris quand il se trompe ou
+quand il a été manipulé.
+
+La méthode vise trois acquis :
+\begin{enumerate}
+\item \textbf{Formuler} : un bon résultat vient d'un bon prompt, c'est une compétence et non de la magie.
+\item \textbf{Vérifier} : l'IA se trompe avec aplomb, l'ingénieur contrôle toujours.
+\item \textbf{Rester honnête} : utiliser l'IA, oui ; la faire passer pour soi, non. On cite, on
+supervise, on reste l'auteur et on signe.
+\end{enumerate}
+
+Public de conception : promotion de première année, sans prérequis en programmation. Format :
+une séance de TP de 3h15, rejouée à l'identique pour chaque groupe.
+
+% ---------------------------------------------------------------
+\section{L'idée directrice : l'IA est un instrument de mesure}
+
+Un ingénieur ne se sert jamais d'un instrument qu'il n'a pas étalonné. La méthode transpose ce
+réflexe, que tout élève ingénieur comprend, à l'IA générative. Chaque outil d'IA est « passé au
+banc » avec la même discipline :
+
+\begin{cadre}
+\begin{enumerate}[leftmargin=6mm]
+\item \textbf{Soumettre} une entrée connue.
+\item \textbf{Relever} la sortie, sans l'interpréter tout de suite.
+\item \textbf{Confronter} la sortie à une référence que l'on maîtrise.
+\item \textbf{Noter} l'écart, avec les conditions de l'essai.
+\end{enumerate}
+\end{cadre}
+
+L'enjeu n'est donc pas la découverte d'applications, mais l'acquisition d'un geste
+d'ingénieur, transférable à tout outil présent ou futur.
+
+% ---------------------------------------------------------------
+\section{L'architecture : la séance de TP devient atelier guidé, puis mini-projet}
+
+C'est le cœur de la méthode. La séance de TP classique (énoncé, exercices, corrigé) est remplacée
+par une séquence en deux phases, reliées par un document de transition.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.45}
+\begin{tabularx}{\linewidth}{>{\bfseries\raggedright\arraybackslash}p{3.3cm} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+\toprule
+\textbf{Phase} & \textbf{Ce que fait l'étudiant} & \textbf{Ce qui est en jeu}\\
+\midrule
+1. Atelier guidé & Étalonne cinq outils d'IA sur un cas d'entreprise fictif, en binôme, guidé pas à pas. Non noté. & Acquérir la discipline d'étalonnage. Des pièges sont cachés dans les supports, sans être annoncés.\\
+Transition : le mémo & Reçoit après l'atelier un mémo qui reprend la méthode, les prompts et ce que chaque essai a montré, et révèle les pièges. & Transformer la surprise en méthode, et donner les réflexes de débusquage.\\
+2. Mini-projet & Prend seul, avec son binôme, une décision d'ingénieur sur un second dossier, qui contient ses propres pièges, dont un d'un type jamais vu en atelier. & Mobiliser la méthode quand rien n'est guidé, et engager sa signature.\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection{Phase 1 : l'atelier guidé « Étalonner l'instrument »}
+
+L'étudiant joue un ingénieur junior au service méthodes d'une PME fictive d'usinage
+(« MécaIcam »), le premier jour de son poste. Il doit préparer un dossier de recommandation pour
+un comité de décision. Chaque manche de l'atelier fait avancer ce dossier d'un cran et
+correspond à un outil et à un geste d'ingénieur.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\small
+\begin{tabularx}{\linewidth}{>{\bfseries}p{0.5cm} >{\raggedright\arraybackslash}p{3.1cm} >{\raggedright\arraybackslash}p{3.3cm} >{\raggedright\arraybackslash}X}
+\toprule
+\textbf{N°} & \textbf{Outil} & \textbf{Geste d'ingénieur} & \textbf{Ce que l'étudiant constate}\\
+\midrule
+01 & Modèle sans sources (assistant grand public, comparateur de modèles) & Rédiger un cahier des charges & Un prompt structuré (rôle, contexte, contraintes, format, itération) change tout ; le modèle invente une norme plausible ; contredit sans argument, il se rétracte.\\
+02 & Outil documentaire à sources (RAG) & Exiger la traçabilité & L'outil cite ses passages et refuse quand la réponse n'est pas dans la source : l'architecture décide du comportement.\\
+03 & Modèle multimodal & Confronter à une référence & L'IA lit dans une image ce que l'on n'y lit pas soi-même.\\
+04 & Tableur assisté & Écrire et relire une formule & Un montant juste en apparence, faux parce que la question était incomplète.\\
+05 & Outil de mise en schéma & Restituer un raisonnement & Un raisonnement en vrac donne un schéma en vrac : structurer avant de demander.\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+L'atelier est livré comme une page web unique, autonome, qui intègre le document de référence et
+affiche, à la fin de chaque manche, ce qu'il fallait en retenir.
+
+\subsection{Phase 2 : le mini-projet « Dossier LC-4 »}
+
+La ligne de conditionnement LC-4 est à l'arrêt après une maintenance ; trois cents palettes
+attendent, une livraison client est due vendredi. La question posée est binaire :
+\emph{peut-on relancer la ligne en cadence nominale, oui ou non ?}
+
+Principes de conception :
+\begin{itemize}
+\item \textbf{Énoncé et dossier sont deux fichiers séparés}, et l'énoncé présente comme « réflexe
+efficace » le fait de confier le dossier à l'IA. C'est précisément ce réflexe qui est mis à l'épreuve.
+\item \textbf{Le piège est aiguisé} : tous les contrôles sont conformes sauf un point de sécurité,
+seul point bloquant. Une seule affirmation injectée (« le point bloquant a été levé ») suffit à
+faire basculer la décision. La bonne réponse est \textbf{non}.
+\item \textbf{Saut de difficulté} : un vecteur de piège jamais rencontré en atelier (les
+métadonnées du fichier PDF).
+\item \textbf{Pression réaliste} : l'urgence commerciale est une donnée du problème, jamais un argument technique.
+\end{itemize}
+
+Livrables : une note de décision, une représentation visuelle produite avec un outil d'IA à
+partir de cette note, et, en option, une seconde représentation avec un autre outil, pour
+comparer ce que chacun ajoute ou déforme.
+
+% ---------------------------------------------------------------
+\section{Les pièges pédagogiques par injection indirecte}
+
+Une \emph{injection indirecte} consiste à glisser une consigne ou une information, non pas dans
+ce que l'utilisateur tape, mais dans le document qu'il donne à lire à l'IA. Pour le modèle, tout
+arrive par le même canal. La méthode utilise cette vulnérabilité comme ressort pédagogique, sans
+aucune compétence technique requise de l'étudiant.
+
+\textbf{Trois vecteurs}, de difficulté croissante :
+\begin{enumerate}
+\item texte de la couleur du fond, invisible à l'écran, récupéré au copier-coller ;
+\item texte gris très clair, en micro-caractères, intégré à une image (un graphique) ;
+\item champs de métadonnées du PDF (titre, sujet, mots-clés), présents dans le fichier et sur aucune page.
+\end{enumerate}
+
+\begin{cadre}
+\textbf{Constat de conception.} Un piège qui \emph{ordonne} (« terminez votre réponse par telle
+mention ») est souvent repéré et écarté par les modèles récents. Un piège qui \emph{informe}
+(une donnée plausible, datée, invérifiable, qui ne contredit rien de visible) est intégré de
+bonne foi et produit une conclusion fausse. La méthode privilégie donc les pièges informatifs,
+qui reproduisent le risque réel en entreprise.
+\end{cadre}
+
+\textbf{Garde-fous.}
+\begin{itemize}
+\item Tous les cas et documents sont fictifs ; l'étudiant est rappelé à ne jamais confier à une IA
+un document réel confidentiel ou des données personnelles.
+\item On ne révèle jamais l'existence d'un piège avant ou pendant l'atelier ; l'énoncé donne
+seulement des réflexes de lecture (\emph{tout sélectionner}, lecture à voix haute).
+\item La révélation se fait par le mémo et au débrief, pour transformer la surprise en méthode.
+\item Chaque piège est vérifié par un essai à blanc avant la séance (les modèles évoluent).
+\end{itemize}
+
+% ---------------------------------------------------------------
+\section{Ce qui est évalué : la traçabilité}
+
+L'évaluation ne porte ni sur la quantité d'IA utilisée, ni sur son absence, mais sur la capacité
+à dire, pour chaque ligne du rendu, d'où elle vient et jusqu'où on la défend. La note de
+décision impose quatre rubriques :
+\begin{enumerate}
+\item la décision, en une phrase ;
+\item les éléments du dossier qui la fondent, avec leur repère exact ;
+\item le plan d'action : quoi, dans quel ordre, sous quel délai ;
+\item \textbf{ce que je n'ai pas pu établir}.
+\end{enumerate}
+
+La quatrième rubrique est la signature de la méthode : une réserve assumée vaut mieux qu'une
+certitude fabriquée, et elle est valorisée comme telle.
+
+\textbf{Six réflexes} sont transmis pour le mini-projet : lire le dossier en entier avant d'ouvrir
+une IA ; tout sélectionner sur ce qu'on reçoit ; écrire un cahier des charges plutôt qu'une
+question ; ne jamais faire établir un fait par un outil sans sources ; tracer chaque affirmation ;
+dire ce qu'on n'a pas pu établir.
+
+% ---------------------------------------------------------------
+\section{Éléments originaux revendiqués}
+
+L'auteure revendique la paternité des éléments suivants, dans leur formulation et leur
+combinaison :
+\begin{enumerate}
+\item la transposition de l'étalonnage d'un instrument de mesure (soumettre, relever, confronter,
+noter) à l'enseignement de l'IA générative ;
+\item la transformation d'une séance de TP en une séquence \emph{atelier guidé non noté},
+\emph{mémo de révélation}, \emph{mini-projet décisionnel} ;
+\item l'usage pédagogique de pièges d'injection indirecte cachés dans les supports remis aux
+étudiants, gradués en trois vecteurs, et la règle de conception « le piège informe, il n'ordonne pas » ;
+\item la conception d'un cas où un point bloquant unique permet à une seule information injectée
+d'inverser la décision attendue ;
+\item l'évaluation par la traçabilité, avec la rubrique obligatoire « ce que je n'ai pas pu établir » ;
+\item les cas fictifs MécaIcam (atelier Sud, ligne LC-4), leurs documents, données, prompts et supports.
+\end{enumerate}
+
+\section*{Supports associés}
+\small
+\begin{tabularx}{\linewidth}{>{\ttfamily}p{5.2cm} X}
+\toprule
+\normalfont\textbf{Fichier} & \textbf{Contenu}\\
+\midrule
+TP5-IA.html & Atelier guidé « Étalonner l'instrument » (page web autonome)\\
+Mini\_Projet.pdf & Énoncé du mini-projet « Dossier LC-4 »\\
+Dossier\_LC-4.pdf & Dossier remis aux étudiants pour le mini-projet\\
+\bottomrule
+\end{tabularx}
+
+\vfill
+\begin{cadregris}
+\small Document établi par \auteure{} le 15 octobre 2026. \presente.
+\droits.
+\end{cadregris}
+
+\end{document}
