@@ -1,5 +1,7 @@
 # Pédagogie des TP IA numérique
 
+[![DOI méthodologie](https://zenodo.org/badge/DOI/10.5281/zenodo.23390568.svg)](https://doi.org/10.5281/zenodo.23390568) [![DOI supports](https://zenodo.org/badge/DOI/10.5281/zenodo.23390566.svg)](https://doi.org/10.5281/zenodo.23390566)
+
 **Étalonner l'instrument : de l'atelier guidé au mini-projet**
 
 Selina Cheggour, Icam Strasbourg-Europe. Méthode pédagogique, version 1.0 du 15 octobre 2026.
