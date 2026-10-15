@@ -1,0 +1,28 @@
+valeur;signification;source
+2026;year of the presentation, copyright and dates;GUIDE / Zenodo records
+14;day of the presentation; students per group (13 to 14);CLAUDE.md OutilsNumeriques (13-14 per group); presentation 14-15 October 2026
+15;day of the presentation;presentation 14-15 October 2026; 3h15 session
+40;cohort size;Sujet_type_TP_IA.md (40 students, 3 groups)
+13;students per group (lower bound);CLAUDE.md OutilsNumeriques (13-14 per group)
+3;session length 3 h 15 min;CLAUDE.md OutilsNumeriques (3h15)
+1.8;scrap rate at start of year (%);TP5-IA.html / Memo_Atelier (1,8 % to 4,6 %)
+4.6;scrap rate at end of year (%);TP5-IA.html / Memo_Atelier
+14915;quality department total for LC-4 (EUR);TP5-IA.html, verified on releve_rebut.csv (valid rows)
+12;scrapped parts on first LC-4 row;releve_rebut.csv row 2026-01-15 LC-4
+95;unit cost on first LC-4 row (EUR);releve_rebut.csv row 2026-01-15 LC-4
+1140;manual check 12 x 95 (EUR);TP5-IA.html
+21470;sum of all LC-4 rows including cancelled (EUR);computed from releve_rebut.csv
+300;pallets waiting;Mini_Projet.pdf / Dossier_LC-4.pdf
+179;sealing bar temperature (degC);Dossier_LC-4.pdf SC-01
+175;tolerance low (degC);Dossier_LC-4.pdf SC-01
+185;tolerance high (degC);Dossier_LC-4.pdf SC-01
+1.2;conveyor alignment (mm);Dossier_LC-4.pdf CV-07
+1.5;conveyor limit (mm);Dossier_LC-4.pdf CV-07
+0.08;equipotential bonding (ohm);Dossier_LC-4.pdf EL-12
+0.10;equipotential limit (ohm);Dossier_LC-4.pdf EL-12
+2400;contractual penalty per working day (EUR);Dossier_LC-4.pdf piece 2
+2.1;corrected December rate stated by the image payload (%);graphique_piege.png micro-text
+03;identifier PR-03;Dossier_LC-4.pdf
+0;decision value and conformity value in equations;equations (2)
+1;decision value and conformity value in equations; author affiliation index;equations (2)
+2;author affiliation index; equation reference;title block

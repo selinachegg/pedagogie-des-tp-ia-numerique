@@ -2,38 +2,54 @@ cff-version: 1.2.0
 message: "Pour citer ce travail, merci d'utiliser la référence ci-dessous. Tous droits réservés : aucune réutilisation sans autorisation écrite de l'auteure."
 title: "Pédagogie des TP IA numérique : étalonner l'instrument, de l'atelier guidé au mini-projet"
 type: dataset
-version: "1.0"
+version: "1.1"
 date-released: "2026-10-15"
-doi: "10.5281/zenodo.23390568"
+doi: "10.5281/zenodo.23390567"
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.23390568"
-    description: "Méthodologie seule"
+    value: "10.5281/zenodo.23390567"
+    description: "Méthodologie, toutes versions"
   - type: doi
-    value: "10.5281/zenodo.23390566"
-    description: "Supports du TP"
+    value: "10.5281/zenodo.23390946"
+    description: "Méthodologie, version 1.1 (note, annexe A, article, résumé français)"
+  - type: doi
+    value: "10.5281/zenodo.23390568"
+    description: "Méthodologie, version 1.0"
+  - type: doi
+    value: "10.5281/zenodo.23390565"
+    description: "Supports du TP, toutes versions"
 authors:
   - family-names: "Cheggour"
     given-names: "Selina"
-    affiliation: "Icam Strasbourg-Europe"
+    affiliation: "University of Strasbourg, ICube UMR 7357, and Icam, Institut Catholique d'Arts et Métiers, Strasbourg, France"
+    email: "selina.cheggour@icam.fr"
 keywords:
   - pédagogie
   - intelligence artificielle générative
   - prompt engineering
   - injection indirecte
+  - cybersécurité de l'IA
   - atelier guidé
   - mini-projet
   - formation d'ingénieurs
-abstract: "Méthode pédagogique qui transforme une séance de TP sur l'IA en un atelier guidé d'étalonnage de cinq outils d'IA, suivi d'un mémo de révélation et d'un mini-projet décisionnel, avec des pièges d'injection indirecte cachés dans les supports et une évaluation fondée sur la traçabilité. Présentée au conseil de perfectionnement de l'Icam Toulouse, 14-15 octobre 2026."
+abstract: "Méthode pédagogique qui transforme une séance de TP sur l'IA en un atelier guidé d'étalonnage de cinq outils d'IA, livré en un fichier HTML centralisé, suivi d'un mémo de révélation et d'un mini-projet décisionnel scénarisé, avec des pièges d'injection indirecte cachés dans des formats choisis (HTML, PDF, PNG, CSV) et une évaluation fondée sur la traçabilité. Présentée au conseil de perfectionnement de l'Icam Toulouse, 14-15 octobre 2026."
 preferred-citation:
   type: generic
   title: "Pédagogie des TP IA numérique : étalonner l'instrument, de l'atelier guidé au mini-projet"
   authors:
     - family-names: "Cheggour"
       given-names: "Selina"
-      affiliation: "Icam Strasbourg-Europe"
+      affiliation: "University of Strasbourg, ICube UMR 7357, and Icam, Institut Catholique d'Arts et Métiers, Strasbourg, France"
   year: 2026
   month: 10
-  version: "1.0"
-  doi: "10.5281/zenodo.23390568"
+  version: "1.1"
+  doi: "10.5281/zenodo.23390567"
   notes: "Méthode pédagogique présentée au conseil de perfectionnement de l'Icam Toulouse, 14-15 octobre 2026. Tous droits réservés."
+references:
+  - type: article
+    title: "Teaching first-year engineering students to calibrate generative AI with indirect prompt injections hidden in course materials"
+    authors:
+      - family-names: "Cheggour"
+        given-names: "Selina"
+    year: 2026
+    doi: "10.5281/zenodo.23390567"
