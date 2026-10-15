@@ -41,7 +41,9 @@ confier à une IA en croyant leur contenu.
 ## Citer ce travail
 
 Cheggour, S. (2026). *Pédagogie des TP IA numérique : étalonner l'instrument, de l'atelier guidé au mini-projet*. Méthode pédagogique, version 1.0. Présentée au conseil de
-perfectionnement de l'Icam Toulouse, 14-15 octobre 2026. [DOI Zenodo à venir]
+perfectionnement de l'Icam Toulouse, 14-15 octobre 2026. https://doi.org/10.5281/zenodo.23390568
+
+Supports du TP (dépôt séparé) : https://doi.org/10.5281/zenodo.23390566
 
 Un fichier [`CITATION.cff`](CITATION.cff) est fourni (bouton « Cite this repository » de GitHub).
 

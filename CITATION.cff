@@ -4,6 +4,14 @@ title: "Pédagogie des TP IA numérique : étalonner l'instrument, de l'atelier 
 type: dataset
 version: "1.0"
 date-released: "2026-10-15"
+doi: "10.5281/zenodo.23390568"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23390568"
+    description: "Méthodologie seule"
+  - type: doi
+    value: "10.5281/zenodo.23390566"
+    description: "Supports du TP"
 authors:
   - family-names: "Cheggour"
     given-names: "Selina"
@@ -27,4 +35,5 @@ preferred-citation:
   year: 2026
   month: 10
   version: "1.0"
+  doi: "10.5281/zenodo.23390568"
   notes: "Méthode pédagogique présentée au conseil de perfectionnement de l'Icam Toulouse, 14-15 octobre 2026. Tous droits réservés."
