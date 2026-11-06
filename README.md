@@ -42,7 +42,7 @@ pensé comme une initiation à la **cybersécurité de l'IA**.
 | `3_Outils/` | `integrer_document.py` | Script qui intègre le PDF de référence dans la page HTML de l'atelier |
 | racine | `EMPREINTES_SHA256.txt` | Empreintes des fichiers déposés |
 
-⚠️ Les documents de `1_Documents/` contiennent **volontairement** du texte caché et des
+Les documents de `1_Documents/` contiennent **volontairement** du texte caché et des
 métadonnées trompeuses : ce sont les pièges pédagogiques décrits dans la méthode. Ne pas les
 confier à une IA en croyant leur contenu.
 
